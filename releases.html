@@ -1,0 +1,242 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Track Releases</title>
+        <style>
+            @font-face {
+                font-family: 'BodyFont';
+                src: url('fonts/BodyFont.otf') format('opentype');  /* Use .ttf for TrueType fonts */
+            }
+
+            @font-face {
+                font-family: 'TitleFont';
+                src: url('fonts/TitleFont.ttf') format('truetype');  /* Use .otf for OpenType fonts */
+            }
+
+            /* Basic reset */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                background-color: rgb(16 16 17);
+                font-family: Arial, sans-serif;
+                padding: 20px;
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);  /* 4 columns in a row */
+                gap: 20px;
+                width: 100%;  /* Make sure it spans the full width of the viewport */
+                padding: 10px;
+                margin: 0;
+                max-width: 100%;  /* Ensure the container doesn't restrict width */
+            }
+
+            .card {
+                background-color: rgb(16, 16, 17);
+                border-radius: 8px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                width: 100%;  /* Cards should stretch to fill their grid cell */
+                padding: 20px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;  /* Horizontally center content */
+                justify-content: flex-start;  /* Align items to the top */
+                transition: transform 0.2s;
+                margin-bottom: 2em;
+                text-decoration: none;
+                height: 100%; /* Ensure the card takes up the full available height */
+                min-height: 400px;  /* Set a min-height to maintain consistent card size */
+            }
+
+            .card img {
+                height: 200px;
+                width: 200px; 
+                object-fit: cover;  /* Make sure image scales without distortion */
+                border-radius: 8px;
+            }
+
+            /* Title styling (h3) */
+            .card h3 {
+                color: white;
+                font-size: 1.8rem;
+                margin-top: 0.9em;
+                font-family: 'TitleFont', sans-serif;
+                text-transform: lowercase;
+                flex-grow: 0;  /* Prevent title from expanding */
+                flex-shrink: 0; /* Prevent title from shrinking */
+                text-align: center;  /* Ensure title text stays centered */
+            }
+
+            .card h3::first-letter {
+                text-transform: uppercase; /* Capitalize the first letter */
+            }
+
+            /* Paragraph styling (artists) */
+            .card p {
+                color: #666;
+                font-size: 0.8rem;
+                margin-top: 0.7em;
+                font-family: 'BodyFont', sans-serif;
+                text-transform: uppercase;
+                flex-grow: 1; /* Allow the artist text to take available space */
+                text-align: center;  /* Ensure artist names are centered */
+            }
+
+            /* Responsiveness: stack cards on smaller screens */
+            @media (max-width: 1024px) {
+                .container {
+                    grid-template-columns: repeat(2, 1fr);  /* 2 columns on medium screens */
+                }
+            }
+
+            @media (max-width: 768px) {
+                .container {
+                    grid-template-columns: 1fr;  /* 1 column on small screens */
+                }
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="container">
+    
+        <a href="https://hardstyle.com/en/tracks/2d4dff9a-3903-4995-a76f-86156ac34813/down-the-rabbit-hole-live-edit" class="card">
+            <img src="https://hardstyle.com/track_image/2d4dff9a-3903-4995-a76f-86156ac34813/250x250/335" alt="Down The Rabbit Hole (Live Edit)">
+            <h3>Down The Rabbit Hole (Live Edit)</h3>
+            <p>Omnya</p>
+        </a>
+        
+        <a href="https://hardstyle.com/en/tracks/0dd35277-e698-45ee-ac08-e29eb9e109d1/the-nation" class="card">
+            <img src="https://hardstyle.com/track_image/0dd35277-e698-45ee-ac08-e29eb9e109d1/250x250/335" alt="THE NATION">
+            <h3>THE NATION</h3>
+            <p>The Purge, KAMI</p>
+        </a>
+        
+        <a href="https://hardstyle.com/en/tracks/8dad1c92-f128-42a6-af4b-3422b654d139/the-purpose" class="card">
+            <img src="https://hardstyle.com/track_image/8dad1c92-f128-42a6-af4b-3422b654d139/250x250/335" alt="The Purpose">
+            <h3>The Purpose</h3>
+            <p>E-Force, Omnya</p>
+        </a>
+        
+        <a href="https://hardstyle.com/en/tracks/92d32b8e-2f9b-4900-bf84-9dc117d2be07/gamegirl" class="card">
+            <img src="https://hardstyle.com/track_image/92d32b8e-2f9b-4900-bf84-9dc117d2be07/250x250/335" alt="GAMEGIRL">
+            <h3>GAMEGIRL</h3>
+            <p>Sanctuary, Infliction</p>
+        </a>
+        
+        <a href="https://hardstyle.com/en/tracks/3ca0463c-9e8f-4558-a16d-4eebf7e272f6/feel-it" class="card">
+            <img src="https://hardstyle.com/track_image/3ca0463c-9e8f-4558-a16d-4eebf7e272f6/250x250/335" alt="Feel It">
+            <h3>Feel It</h3>
+            <p>Coldax, Spitfire</p>
+        </a>
+        
+        <a href="https://hardstyle.com/en/tracks/5ca0a64d-f82d-4ee0-9cbe-d66a636c1894/attack" class="card">
+            <img src="https://hardstyle.com/track_image/5ca0a64d-f82d-4ee0-9cbe-d66a636c1894/250x250/335" alt="ATTACK!">
+            <h3>ATTACK!</h3>
+            <p>The Purge, Chapter V</p>
+        </a>
+        
+        <a href="https://hardstyle.com/en/tracks/6e9d8193-df18-4a2b-9673-c0c504bd6003/we-can-do-it-one-more-time" class="card">
+            <img src="https://hardstyle.com/track_image/6e9d8193-df18-4a2b-9673-c0c504bd6003/250x250/335" alt="WE CAN DO IT (ONE MORE TIME)">
+            <h3>WE CAN DO IT (ONE MORE TIME)</h3>
+            <p>Sanctuary</p>
+        </a>
+        
+        <a href="https://hardstyle.com/en/tracks/d26e1d78-d771-4414-bded-846887b4b099/vibrate" class="card">
+            <img src="https://hardstyle.com/track_image/d26e1d78-d771-4414-bded-846887b4b099/250x250/335" alt="VIBRATE">
+            <h3>VIBRATE</h3>
+            <p>Coldax</p>
+        </a>
+        
+        <a href="https://hardstyle.com/en/tracks/5e07f38e-b7ce-4af8-b38e-a8d3ed952c4a/hoppa" class="card">
+            <img src="https://hardstyle.com/track_image/5e07f38e-b7ce-4af8-b38e-a8d3ed952c4a/250x250/335" alt="HOPPA">
+            <h3>HOPPA</h3>
+            <p>The Purge, EZG</p>
+        </a>
+        
+        <a href="https://hardstyle.com/en/tracks/1b2997a3-3de7-492a-9d55-44e6aa686d03/rage" class="card">
+            <img src="https://hardstyle.com/track_image/1b2997a3-3de7-492a-9d55-44e6aa686d03/250x250/335" alt="RAGE">
+            <h3>RAGE</h3>
+            <p>CaraCel</p>
+        </a>
+        
+        <a href="https://hardstyle.com/en/tracks/10d51434-051c-4ada-830b-6deb60a69363/my-little-fantasy" class="card">
+            <img src="https://hardstyle.com/track_image/10d51434-051c-4ada-830b-6deb60a69363/250x250/335" alt="MY LITTLE FANTASY">
+            <h3>MY LITTLE FANTASY</h3>
+            <p>4 Tune Fairytales, The Purge</p>
+        </a>
+        
+        <a href="https://hardstyle.com/en/tracks/38c7d411-7baa-4c01-9928-8e59346ca6df/dreamland" class="card">
+            <img src="https://hardstyle.com/track_image/38c7d411-7baa-4c01-9928-8e59346ca6df/250x250/335" alt="DREAMLAND">
+            <h3>DREAMLAND</h3>
+            <p>The Purge</p>
+        </a>
+        
+        <a href="https://hardstyle.com/en/tracks/8721db79-050d-4c86-978f-38e9491381e6/beuk-d-r-in" class="card">
+            <img src="https://hardstyle.com/track_image/8721db79-050d-4c86-978f-38e9491381e6/250x250/335" alt="BEUK D'R IN">
+            <h3>BEUK D'R IN</h3>
+            <p>The Purge, EZG, Lunakorpz</p>
+        </a>
+        
+        <a href="https://hardstyle.com/en/tracks/95efeeec-0175-4592-a9bd-c215f5515b40/rock-da-house" class="card">
+            <img src="https://hardstyle.com/track_image/95efeeec-0175-4592-a9bd-c215f5515b40/250x250/335" alt="ROCK DA HOUSE">
+            <h3>ROCK DA HOUSE</h3>
+            <p>The Purge, Regain</p>
+        </a>
+        
+        <a href="https://hardstyle.com/en/tracks/d6f84405-956c-41cf-9134-887736e05bfc/disturbance-makers" class="card">
+            <img src="https://hardstyle.com/track_image/d6f84405-956c-41cf-9134-887736e05bfc/250x250/335" alt="DISTURBANCE MAKERS">
+            <h3>DISTURBANCE MAKERS</h3>
+            <p>The Purge, Element</p>
+        </a>
+        
+        <a href="https://hardstyle.com/en/tracks/b9d6b539-679c-4c50-9021-4d48dc82e252/disco" class="card">
+            <img src="https://hardstyle.com/track_image/b9d6b539-679c-4c50-9021-4d48dc82e252/250x250/335" alt="DISCO">
+            <h3>DISCO</h3>
+            <p>The Purge, Deluzion</p>
+        </a>
+        
+        <a href="https://hardstyle.com/en/albums/464cd815-45b9-48e4-89eb-c37341364b4b/beyond-trippin" class="card">
+            <img src="https://hardstyle.com/album_image/464cd815-45b9-48e4-89eb-c37341364b4b/256x256/335" alt="BEYOND TRIPPIN'">
+            <h3>BEYOND TRIPPIN'</h3>
+            <p>The Purge</p>
+        </a>
+        
+        <a href="https://hardstyle.com/en/albums/d8398ece-9333-4eb7-89c0-bd416d663067/live-edit-e-p" class="card">
+            <img src="https://hardstyle.com/album_image/d8398ece-9333-4eb7-89c0-bd416d663067/256x256/375" alt="Live Edit E.P.">
+            <h3>Live Edit E.P.</h3>
+            <p>Omnya</p>
+        </a>
+        
+        <a href="https://hardstyle.com/en/albums/b71acac6-572d-4c85-abaf-ff5cacd842be/trippin" class="card">
+            <img src="https://hardstyle.com/album_image/9.118487.106469/256x256" alt="TRIPPIN'">
+            <h3>TRIPPIN'</h3>
+            <p>The Purge</p>
+        </a>
+        
+        <a href="https://hardstyle.com/en/albums/28ebc6cc-85ac-4637-95a6-43ea26b264cd/savage-academy-vol-1" class="card">
+            <img src="https://hardstyle.com/album_image/55.110498.98491/256x256" alt="Savage Academy Vol.1">
+            <h3>Savage Academy Vol.1</h3>
+            <p>Savage Squad Recordings</p>
+        </a>
+        
+        <a href="https://hardstyle.com/en/albums/2e72bf7f-afc6-4884-90d9-1a9293eb89db/bloody-slime" class="card">
+            <img src="https://hardstyle.com/album_image/55.109348.97342/256x256" alt="Bloody Slime">
+            <h3>Bloody Slime</h3>
+            <p>The Purge</p>
+        </a>
+        
+        </div>
+
+    </body>
+    </html>
+    

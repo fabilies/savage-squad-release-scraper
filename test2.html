@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Card Layout</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(16, 16, 17);
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        /* Container for the card items */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 100%;  /* Make sure it spans the full width of the viewport */
+            padding: 10px;
+            margin: 0;
+            max-width: 100%;  /* Ensure the container doesn't restrict width */
+        }
+
+        /* Card styling */
+        .card {
+            background-color: rgb(16, 16, 17);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;  /* Cards should stretch to fill their grid cell */
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;  /* Horizontally center content */
+            justify-content: center; /* Vertically center content */
+            transition: transform 0.2s;
+            margin-bottom: 2em;
+        }
+
+        /* Hover effect for the card */
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .card h3 {
+            color: white;
+            font-size: 1.5em;
+            margin-top: 15px;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+
+        /* Responsiveness: stack cards on smaller screens */
+        @media (max-width: 1024px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);  /* 2 columns on medium screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;  /* 1 column on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <img style="min-width: 200px; min-height:200px;" src="https://hardstyle.com/track_image/0dd35277-e698-45ee-ac08-e29eb9e109d1/250x250/335" alt="Card 1">
+            <h3>Card Title 1</h3>
+            <p>Description for card 1.</p>
+        </div>
+        <div class="card">
+            <img style="min-width: 200px; min-height:200px;" src="https://hardstyle.com/track_image/0dd35277-e698-45ee-ac08-e29eb9e109d1/250x250/335" alt="Card 2">
+            <h3>Card Title 2</h3>
+            <p>Description for card 2.</p>
+        </div>
+        <div class="card">
+            <img style="min-width: 200px; min-height:200px;" src="https://hardstyle.com/track_image/0dd35277-e698-45ee-ac08-e29eb9e109d1/250x250/335" alt="Card 3">
+            <h3>Card Title 3</h3>
+            <p>Description for card 3.</p>
+        </div>
+        <div class="card">
+            <img style="min-width: 200px; min-height:200px;" src="https://hardstyle.com/track_image/0dd35277-e698-45ee-ac08-e29eb9e109d1/250x250/335" alt="Card 3">
+            <h3>Card Title 4</h3>
+            <p>Description for card 4.</p>
+        </div>
+        <div class="card">
+            <img style="min-width: 200px; min-height:200px;" src="https://hardstyle.com/track_image/0dd35277-e698-45ee-ac08-e29eb9e109d1/250x250/335" alt="Card 3">
+            <h3>Card Title 5</h3>
+            <p>Description for card 5.</p>
+        </div>
+        <div class="card">
+            <img style="min-width: 200px; min-height:200px;" src="https://hardstyle.com/track_image/0dd35277-e698-45ee-ac08-e29eb9e109d1/250x250/335" alt="Card 3">
+            <h3>Card Title 6</h3>
+            <p>Description for card 6.</p>
+        </div>
+    </div>
+
+</body>
+</html>
