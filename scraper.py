@@ -1,7 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 
-# Wat kijk je joh schlemiel!!!
 url = "https://hardstyle.com/en/music/update?artist=&year=&genre=&label=Savage%20Squad%20Recordings"
 
 response = requests.get(url)
